@@ -6,6 +6,8 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 
+// my custom pipe
+import { CommaObjectPipe } from '../pipes/comma-object.pipe';
 
 @NgModule({
   imports: [
@@ -14,6 +16,10 @@ import { HomePageRoutingModule } from './home-routing.module';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage]
+  declarations: [
+    HomePage,
+    CommaObjectPipe
+  ],
+  exports: [CommaObjectPipe]
 })
-export class HomePageModule {}
+export class HomePageModule { }
